@@ -14,14 +14,14 @@
 
     String realpath = request.getServletContext().getRealPath("upload");
     File dir = new File(realpath);
-    if(!dir.exists()) dir.mkdirs();
+    if (!dir.exists()) dir.mkdirs();
     System.out.println("file dir : " + dir);
 
     MultipartRequest multipartRequest = null;
-    multipartRequest = new MultipartRequest(request,realpath,sizelimit,"utf-8", new DefaultFileRenamePolicy());
+    multipartRequest = new MultipartRequest(request, realpath, sizelimit, "utf-8", new DefaultFileRenamePolicy());
 
     filename = multipartRequest.getFilesystemName("img");
-    System.out.println("file name : " +  filename);
+    System.out.println("file name : " + filename);
 %>
 <html>
 <head>
@@ -29,6 +29,6 @@
 </head>
 <body>
 파일명: <%=filename%><br/>
-<img src = "${pageContext.request.contextPath}/upload/<%=filename%>">
+<img src="${pageContext.request.contextPath}/upload/<%=filename%>">
 </body>
 </html>

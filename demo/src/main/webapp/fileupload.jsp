@@ -14,9 +14,9 @@
     <title>사진 올리</title>
 </head>
 <body>
-<form action="fileupload_ok.jsp" method = "post" enctype="multipart/form-data">
-    이미지 선택 : <input type = "file" name = "img"/>
-    <input type =  "submit" value="업로드"/>
+<form action="fileupload_ok.jsp" method="post" enctype="multipart/form-data">
+    이미지 선택 : <input type="file" name="img"/>
+    <input type="submit" value="업로드"/>
 </form>
 
 </body>
